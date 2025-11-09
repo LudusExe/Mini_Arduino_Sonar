@@ -54,7 +54,7 @@ The Arduino code rotates the servo motor back and forth between 15° and 165° w
 - `distance` = measured distance (cm)  
 - `.` = delimiter to signal the end of the measurement  
 
-This data is read by Processing for visualization. You can find the code in `MiniSonar.ino`.
+This data is read by Processing for visualization. You can find the code in `ard_ide.ino`.
 
 ---
 
@@ -70,7 +70,7 @@ The Processing sketch reads the serial data from Arduino and creates a radar-lik
 
 The radar display updates continuously, giving a dynamic visualization of detected objects.
 
-You can find the Processing code in `MiniSonar.pde`.
+You can find the Processing code in `process_sketch.py`.
 
 ---
 
@@ -78,17 +78,17 @@ You can find the Processing code in `MiniSonar.pde`.
 
 1. Arduino rotates the servo in small increments, scanning the environment.  
 2. The ultrasonic sensor measures distances at each angle.  
-3. Arduino sends the measurements to Processing via serial communication.  
-4. Processing parses the data, calculates the position of each detected object, and draws it on a radar display.  
-5. Previous points fade over time, creating a “blip” effect similar to a real sonar.  
+4. Arduino sends the measurements to Processing via serial communication.  
+5. Processing parses the data, calculates the position of each detected object, and draws it on a radar display.  
+6. Previous points fade over time, creating a “blip” effect similar to a real sonar.  
 
 ---
 
 ## Running the Project
 
 1. Connect your Arduino to the computer.  
-2. Upload `MiniSonar.ino` to your Arduino board.  
-3. Open Processing and run `MiniSonar.pde`.  
+2. Upload `ard_ide.ino` to your Arduino board.  
+3. Open Processing and run `process_sketch.py`.  
 4. Update the serial port in Processing to match your Arduino (for example, `"COM3"` on Windows or `"/dev/tty.usbmodemXXXX"` on macOS).  
 5. Observe the radar display as the servo sweeps and the ultrasonic sensor detects objects.
 
@@ -103,3 +103,4 @@ You can find the Processing code in `MiniSonar.pde`.
 ---
 
 This project is ideal for beginners learning about Arduino sensors, serial communication, and graphical visualization using Processing.
+
