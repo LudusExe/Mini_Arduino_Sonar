@@ -70,7 +70,7 @@ The Processing sketch reads the serial data from Arduino and creates a radar-lik
 
 The radar display updates continuously, giving a dynamic visualization of detected objects.
 
-You can find the Processing code in `process_sketch.py`.
+You can find the Processing code in `sketch_251108b.pde`.
 
 ---
 
@@ -88,7 +88,7 @@ You can find the Processing code in `process_sketch.py`.
 
 1. Connect your Arduino to the computer.  
 2. Upload `ard_ide.ino` to your Arduino board.  
-3. Open Processing and run `process_sketch.py`.  
+3. Open Processing and run `sketch_251108b.pde`.  
 4. Update the serial port in Processing to match your Arduino (for example, `"COM3"` on Windows or `"/dev/tty.usbmodemXXXX"` on macOS).  
 5. Observe the radar display as the servo sweeps and the ultrasonic sensor detects objects.
 
@@ -102,5 +102,4 @@ You can find the Processing code in `process_sketch.py`.
 
 ---
 
-This project is ideal for beginners learning about Arduino sensors, serial communication, and graphical visualization using Processing.
-
+This project is ideal for beginners learning about Arduino sensors, serial communication and graphical visualization using Processing.
