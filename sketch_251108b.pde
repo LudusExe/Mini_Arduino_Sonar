@@ -14,7 +14,7 @@ ArrayList<Echo> echoes = new ArrayList<Echo>();
 
 PFont orcFont;
 
-// Altezza della barra inferiore dell’interfaccia
+// Height of the bottom UI bar
 float uiHeight = 60;
 
 void setup() {
@@ -22,7 +22,7 @@ void setup() {
   smooth();
 
   println(Serial.list());
-  // Cambia "COM3" con la tua porta seriale corretta
+  // Change "COM3" to your correct serial port
   myPort = new Serial(this, "COM3", 9600);
   myPort.bufferUntil('.');
 
@@ -35,15 +35,13 @@ void draw() {
   noStroke();
   rect(0, 0, width, height);
 
-  // Posiziona il radar sopra la barra UI
+  // Position the radar above the UI bar
   translate(width / 2, height - uiHeight - 30);
 
   drawRadar();
   drawBeam();
   drawEchoes();
   drawObject();
-
-  // Disegna l’interfaccia in basso
   drawUI();
 }
 
